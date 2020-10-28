@@ -16,16 +16,28 @@ export default new VueRouter({
             component:Home
         },
         {
-            path:'/Login',
-            component:Login
+            path:'/login',
+            component:Login,
+            meta:{
+                isHidden:true
+            }
         },
         {
-            path:'Register',
-            component:Register
+            path:'/register',
+            component:Register,
+            meta:{
+                isHidden:true
+            }
         },
         {
-            path:'Search',
-            component:Search
+            path:'/search/:keyword?',
+            component:Search,
+            name:'search',
+            props: (route)=>({keyword:route.params.keyword, keyword1:route.query.keyword1 })
+        },
+        {
+            path:'/',
+            redirect:'/home'
         }
     ]
 })
