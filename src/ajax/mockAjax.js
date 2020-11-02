@@ -8,7 +8,7 @@ import 'nprogress/nprogress.css'
 
 //配置基础路径和超市限制
 const instance = axios.create({
-    baseURL:'/api',    //基础路径
+    baseURL:'/mock',    //基础路径
     timeout:20000       //超时限制
 })
 
