@@ -27,3 +27,11 @@ export const reqFloorList = () =>{
         method:'get'
     })
 };
+
+export const reqGoodsListInfo = (searchParmas) =>{
+    return Ajax({
+        url:'/list',
+        method:'post',
+        data:searchParmas
+    })
+}
